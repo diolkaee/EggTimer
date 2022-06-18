@@ -12,7 +12,9 @@ private const val SENSOR_DELAY = SensorManager.SENSOR_DELAY_UI
 val PRESSURE_AT_SEALEVEL_HPA = Pressure(1013f)
 
 @JvmInline
-value class Pressure(val hPa: Float)
+value class Pressure(val hPa: Float) {
+    override fun toString(): String = this.hPa.toString()
+}
 
 class PressureService(private val context: Context) {
     val pressureFlow = callbackFlow<Pressure> {

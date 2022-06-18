@@ -13,7 +13,7 @@ class UpdatePressureUseCase : UseCase<EggTimerUIState, Pressure> {
         parameter: Pressure
     ): UseCaseAction<EggTimerUIState> {
         return StateAction {
-            val isSignificant = abs(pressure - state.pressure) > 1f
+            val isSignificant = abs(pressure.hPa - state.pressure.hPa) > 1f
             if (isSignificant) {
                 if (timerRunning) {
                     copy(pressure = pressure)

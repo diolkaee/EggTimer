@@ -35,7 +35,6 @@ class MainActivity : ComponentActivity() {
                         uiState = eggTimerUIState,
                         onEggVariantChanged = { eggTimerViewModel.selectEggVariant(it) },
                         onToggleTimer = { eggTimerViewModel.toggleTimer() },
-                        onClearTimer = { eggTimerViewModel.clearTimer() }
                     )
                 }
             }
@@ -47,6 +46,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun DefaultPreview() {
     EggTimerTheme {
-        EggTimerScreen(EggTimerUIState(), {}, {}, {})
+        EggTimerScreen(EggTimerUIState(), {}, {})
     }
 }
