@@ -11,4 +11,4 @@ This App is not ready for publish but rather a demo space for experimenting with
 - `business`: The business or domain layer. Contains repositories and services.
 
 ## Screenshots
-[MainScreen](./assets/MainActivity.png)
+<img src="./assets/MainActivity.png"  width="200" />
